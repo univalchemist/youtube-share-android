@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.videoDetail.VideoDetailFragment">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/youtube_player_view"
+        app:layout_constraintBottom_toBottomOf="parent" android:layout_width="0dp"
+        android:background="@color/background"
+        android:layout_height="0dp">
+
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/no_data_image"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".6"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/no_data"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/message_text"
+                app:layout_constraintTop_toBottomOf="@+id/no_data_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/no_statistics"
+                android:fontFamily="@font/raleway_medium"
+                app:fontFamily="@font/raleway_medium"
+                android:layout_marginTop="32dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:id="@+id/textView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/stats_section"
+            layout="@layout/video_detail_stats_section"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"
+            android:text="@string/error"
+            android:fontFamily="@font/raleway_regular"
+            app:fontFamily="@font/raleway_regular"
+            android:textSize="@dimen/list_item_title_text"/>
+
+    </ViewFlipper>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

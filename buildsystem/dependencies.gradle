@@ -1,0 +1,89 @@
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com/' }
+    }
+}
+
+ext {
+    // Android
+    android_application_id = "com.cynny.videoface"
+    android_min_sdk_version = 19
+    android_target_sdk_version = 28
+    android_compile_sdk_version = 28
+    test_instrumentation_runner = 'com.github.tmurakami.dexopener.DexOpenerAndroidJUnitRunner'
+
+    // Libraries
+    arch_version = "2.0.0"
+    dagger_version = "2.16"
+    retrofit_version = "2.3.0"
+    okhttp_version = "3.9.1"
+    androidx_version = "1.0.0"
+    constraint_layout_version = "1.1.0"
+    glide_version = "4.8.0"
+    timber_version = "4.6.1"
+    retrofit_rx_version = "2.4.0"
+    kotlinx_coroutines_android_version = "1.0.0"
+    rx_kotlin_version = "2.3.0"
+    rx_android_version = "2.1.0"
+    rx_java_version = "2.2.0"
+    mpchart_version = "v3.0.3"
+    progresswheel_version = "1.1.5"
+    dragdismiss_version = "1.0.4"
+    crashlytics_version = "2.9.6"
+    firebase_version = "16.0.4"
+    multidex_version = "1.0.3"
+
+    // Testing
+    junit_version = "4.12"
+    mockk_version = "1.8.7"
+    assertk_version = "0.9"
+
+    deps = [
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            kotlinxCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinx_coroutines_android_version}",
+            ktx                     : "androidx.core:core-ktx:${androidx_version}",
+            appcompatv7             : "androidx.appcompat:appcompat:${androidx_version}",
+            recyclerviewv7          : "androidx.recyclerview:recyclerview:${androidx_version}",
+            design                  : "com.google.android.material:material:${androidx_version}",
+            constraintLayout        : "androidx.constraintlayout:constraintlayout:${constraint_layout_version}",
+            lifecycleRuntime        : "androidx.lifecycle:lifecycle-runtime:${arch_version}",
+            lifecycleExtensions     : "androidx.lifecycle:lifecycle-extensions:${arch_version}",
+            room                    : "androidx.room:room-runtime:${arch_version}",
+            roomCompiler            : "androidx.room:room-compiler:${arch_version}",
+            roomRxJava              : "androidx.room:room-rxjava2:${arch_version}",
+            livedata                : "androidx.lifecycle:lifecycle-livedata:${arch_version}",
+            lifecycleCompiler       : "androidx.lifecycle:lifecycle-compiler:${arch_version}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${retrofit_version}",
+            retrofitRx              : "com.squareup.retrofit2:adapter-rxjava2:${retrofit_rx_version}",
+            retrofitGson            : "com.squareup.retrofit2:converter-gson:${retrofit_version}",
+            okhttpInterceptor       : "com.squareup.okhttp3:logging-interceptor:${okhttp_version}",
+            glide                   : "com.github.bumptech.glide:glide:${glide_version}",
+            glideCompiler           : "com.github.bumptech.glide:compiler:${glide_version}",
+            timber                  : "com.jakewharton.timber:timber:${timber_version}",
+            navigationFragment      : "android.arch.navigation:navigation-fragment-ktx:${nav_version}",
+            navigationUi            : "android.arch.navigation:navigation-ui-ktx:${nav_version}",
+            rxJava                  : "io.reactivex.rxjava2:rxjava:${rx_java_version}",
+            rxKotlin                : "io.reactivex.rxjava2:rxkotlin:${rx_kotlin_version}",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rx_android_version}",
+            dagger                  : "com.google.dagger:dagger:${dagger_version}",
+            daggerAndroidSupport    : "com.google.dagger:dagger-android-support:${dagger_version}",
+            daggerAndroidProcessor  : "com.google.dagger:dagger-android-processor:${dagger_version}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${dagger_version}",
+            mpChart                 : "com.github.PhilJay:MPAndroidChart:${mpchart_version}",
+            dragDismiss             : "com.github.Commit451:ElasticDragDismissLayout:${dragdismiss_version}",
+            crashlytics             : "com.crashlytics.sdk.android:crashlytics:${crashlytics_version}",
+            firebaseCore            : "com.google.firebase:firebase-core:${firebase_version}",
+            multidex                : "com.android.support:multidex:${multidex_version}"
+    ]
+
+    testDeps = [
+            junit  : "junit:junit:${junit_version}",
+            mockk  : "io.mockk:mockk:${mockk_version}",
+            arch   : "androidx.arch.core:core-testing:${arch_version}",
+            assertk: "com.willowtreeapps.assertk:assertk:${assertk_version}"
+    ]
+}
+

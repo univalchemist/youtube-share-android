@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion rootProject.ext.android_compile_sdk_version
+    defaultConfig {
+        applicationId rootProject.ext.android_application_id
+        minSdkVersion rootProject.ext.android_min_sdk_version
+        targetSdkVersion rootProject.ext.android_target_sdk_version
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        testInstrumentationRunner rootProject.ext.test_instrumentation_runner
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    def deps = rootProject.ext.deps
+    def testDeps = rootProject.ext.testDeps
+
+    implementation project(':youtube-player')
+    implementation project(':progresswheelview')
+    implementation deps.kotlin
+    implementation deps.kotlinxCoroutinesAndroid
+    implementation deps.ktx
+    implementation deps.appcompatv7
+    implementation deps.recyclerviewv7
+    implementation deps.design
+    implementation deps.constraintLayout
+    implementation deps.lifecycleRuntime
+    implementation deps.lifecycleExtensions
+    kapt deps.lifecycleCompiler
+    implementation deps.room
+    kapt deps.roomCompiler
+    implementation deps.roomRxJava
+    implementation deps.retrofit
+    implementation deps.retrofitRx
+    implementation deps.retrofitGson
+    implementation deps.okhttpInterceptor
+    implementation deps.glide
+    kapt deps.glideCompiler
+    implementation deps.timber
+    implementation deps.navigationFragment
+    implementation deps.navigationUi
+    implementation deps.rxKotlin
+    implementation deps.rxAndroid
+    implementation deps.dagger
+    implementation deps.daggerAndroidSupport
+    kapt deps.daggerAndroidProcessor
+    kapt deps.daggerCompiler
+    implementation deps.mpChart
+    implementation deps.firebaseCore
+    implementation deps.crashlytics
+    implementation deps.multidex
+
+    testImplementation testDeps.junit
+    testImplementation testDeps.arch
+    testImplementation testDeps.mockk
+    testImplementation testDeps.assertk
+}

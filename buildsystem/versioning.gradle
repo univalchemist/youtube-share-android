@@ -1,0 +1,21 @@
+import java.text.SimpleDateFormat
+
+def version = "1.2.0"
+def (versionMajor, versionMinor, versionPatch) = version.toLowerCase().replaceAll('-', '').tokenize('.')
+
+ext.versionMajor = versionMajor.toInteger()
+ext.versionMinor = versionMinor.toInteger()
+ext.versionPatch = versionPatch.toInteger()
+ext.buildTime = { ->
+    def df = new SimpleDateFormat("yyyyMMdd")
+    df.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return df.format(new Date())
+}
+
+ext.generateVersionCode = { ->
+    return ext.android_min_sdk_version * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+ext.generateVersionName = { ->
+    return "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+}

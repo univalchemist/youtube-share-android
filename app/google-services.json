@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "573751325428",
+    "firebase_url": "https://videoface-b2b04.firebaseio.com",
+    "project_id": "videoface-b2b04",
+    "storage_bucket": "videoface-b2b04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573751325428:android:b55390f5b57ca82c",
+        "android_client_info": {
+          "package_name": "com.cynny.videoface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573751325428-c1rlujhc3egbpqr2gpojvn3uotkugkqu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cynny.videoface",
+            "certificate_hash": "277de5b0af71aad55b2262aa26acae71c2509f16"
+          }
+        },
+        {
+          "client_id": "573751325428-8abu0hrlgdapipjlvgequos5umgdn5iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL32oihg-AP-XyQSWxCjlfwn31qhBroJY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573751325428-8abu0hrlgdapipjlvgequos5umgdn5iq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

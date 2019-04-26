@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph" app:startDestination="@id/videoListFragment">
+
+    <fragment android:id="@+id/videoListFragment" android:name="com.cynny.videoface.ui.videoList.VideoListFragment" android:label="video_fragment"
+        tools:layout="@layout/video_list_fragment">
+        <action android:id="@+id/action_videoListFragment_to_videoDetailFragment" app:destination="@+id/videoDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/videoDetailFragment" android:name="com.cynny.videoface.ui.videoDetail.VideoDetailFragment"
+        android:label="video_detail_fragment" tools:layout="@layout/video_detail_fragment">
+        <argument android:name="videoId" app:argType="string"/>
+        <argument android:name="videoRemoteUrl" app:argType="string"/>
+        <argument android:name="videoTitle" app:argType="string"/>
+    </fragment>
+</navigation>

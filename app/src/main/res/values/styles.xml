@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+        <item name="android:textViewStyle">@style/textViewStyle</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/secondaryColor</item>
+        <item name="colorControlHighlight">@color/primaryTextColor</item>
+        <item name="actionModeCloseButtonStyle">@style/myclosebutton</item>
+    </style>
+
+    <style name="myclosebutton" parent="Widget.AppCompat.Light.ActionButton.CloseMode">
+        <item name="android:tint">@color/primaryTextColor</item>
+    </style>
+
+    <style name="textViewStyle" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/raleway</item>
+        <item name="android:fontFamily">@font/raleway</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:fontFamily">@font/raleway_semibold</item>
+    </style>
+
+</resources>

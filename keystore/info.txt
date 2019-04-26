@@ -1,0 +1,3 @@
+Store password=cynny2016
+Key alias=videoface_upload
+Key password=cynny2016

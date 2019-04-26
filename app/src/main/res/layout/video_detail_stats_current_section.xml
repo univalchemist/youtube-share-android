@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/faces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="4dp"
+        android:textSize="30sp"
+        tools:text="100120"
+        android:fontFamily="@font/raleway_extrabold"
+        app:fontFamily="@font/raleway_extrabold"
+        app:layout_constraintEnd_toStartOf="@+id/faces_label"
+        app:layout_constraintHorizontal_chainStyle="packed"
+    />
+
+    <TextView
+        android:id="@+id/faces_label"
+        android:text="@string/faces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_extrabold"
+        app:fontFamily="@font/raleway_extrabold"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/faces"
+        app:layout_constraintBaseline_toBaselineOf="@id/faces"
+        app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/faces"
+        app:layout_constraintBottom_toTopOf="@id/bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/happyImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_happy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/surpriseImage"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/happyLabel"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/happyLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/happyImage"
+            app:layout_constraintBottom_toTopOf="@+id/happyText"
+            app:layout_constraintEnd_toEndOf="@+id/happyImage"
+            app:layout_constraintStart_toStartOf="@+id/happyImage"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/happyText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/happyImage"
+            app:layout_constraintStart_toStartOf="@+id/happyImage"
+            app:layout_constraintTop_toBottomOf="@+id/happyLabel"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+
+        <ImageView
+            android:id="@+id/surpriseImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_surprise"
+            app:layout_constraintStart_toEndOf="@+id/happyImage"
+            app:layout_constraintEnd_toStartOf="@+id/sadImage"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/surpriseLabel"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/surprise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/surpriseLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@+id/surpriseImage"
+            app:layout_constraintBottom_toTopOf="@+id/surpriseText"
+            app:layout_constraintEnd_toEndOf="@+id/surpriseImage"
+            app:layout_constraintStart_toStartOf="@+id/surpriseImage"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/surpriseText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/surpriseImage"
+            app:layout_constraintStart_toStartOf="@+id/surpriseImage"
+            app:layout_constraintTop_toBottomOf="@+id/surpriseLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+        <ImageView
+            android:id="@+id/sadImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_sad"
+            app:layout_constraintStart_toEndOf="@+id/surpriseImage"
+            app:layout_constraintEnd_toStartOf="@+id/fearImage"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/sadLabel"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sadLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@+id/sadImage"
+            app:layout_constraintBottom_toTopOf="@+id/sadText"
+            app:layout_constraintEnd_toEndOf="@+id/sadImage"
+            app:layout_constraintStart_toStartOf="@+id/sadImage"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sadText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/sadImage"
+            app:layout_constraintStart_toStartOf="@+id/sadImage"
+            app:layout_constraintTop_toBottomOf="@+id/sadLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+        <ImageView
+            android:id="@+id/fearImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:src="@drawable/ic_fear"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sadImage"
+            app:layout_constraintEnd_toStartOf="@+id/disgustImage"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/fearLabel"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/fear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fearLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@+id/fearImage"
+            app:layout_constraintBottom_toTopOf="@+id/fearText"
+            app:layout_constraintEnd_toEndOf="@+id/fearImage"
+            app:layout_constraintStart_toStartOf="@+id/fearImage"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fearText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fearImage"
+            app:layout_constraintStart_toStartOf="@+id/fearImage"
+            app:layout_constraintTop_toBottomOf="@+id/fearLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+        <ImageView
+            android:id="@+id/disgustImage"
+            android:src="@drawable/ic_disgust"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fearImage"
+            app:layout_constraintEnd_toStartOf="@+id/angerImage"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/disgustLabel"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/disgust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/disgustLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@+id/disgustImage"
+            app:layout_constraintBottom_toTopOf="@+id/disgustText"
+            app:layout_constraintEnd_toEndOf="@+id/disgustImage"
+            app:layout_constraintStart_toStartOf="@+id/disgustImage"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/disgustText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/disgustImage"
+            app:layout_constraintStart_toStartOf="@+id/disgustImage"
+            app:layout_constraintTop_toBottomOf="@+id/disgustLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+        <!--<ImageView
+                        android:id="@+id/restedImage"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        android:src="@drawable/ic_neutral"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/surpriseImage"
+                        app:layout_constraintEnd_toStartOf="@+id/happinessImage"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        app:layout_constraintBottom_toTopOf="@+id/restedLabel"
+                        app:layout_constraintVertical_chainStyle="packed"/>
+            
+                    <TextView
+                        android:text="@string/rested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/restedLabel"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/raleway_semibold"
+                        app:fontFamily="@font/raleway_semibold"
+                        android:textSize="@dimen/list_item_subtitle_text"
+                        app:layout_constraintTop_toBottomOf="@+id/restedImage"
+                        app:layout_constraintBottom_toTopOf="@+id/restedText"
+                        app:layout_constraintEnd_toEndOf="@+id/restedImage"
+                        app:layout_constraintStart_toStartOf="@+id/restedImage"
+                        app:layout_constraintHorizontal_bias="0.5"/>
+            
+            
+                    <TextView
+                        android:text="@string/emo_placeholder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/restedText"
+                        android:fontFamily="@font/raleway_semibold"
+                        app:fontFamily="@font/raleway_semibold"
+                        android:textSize="@dimen/list_item_subtitle_text"
+                        android:textColor="@color/secondaryTextColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/restedImage"
+                        app:layout_constraintStart_toStartOf="@+id/restedImage"
+                        app:layout_constraintTop_toBottomOf="@+id/restedLabel"
+                        app:layout_constraintHorizontal_bias="0.5"
+                    />-->
+
+
+        <ImageView
+            android:id="@+id/angerImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_anger"
+            app:layout_constraintStart_toEndOf="@+id/disgustImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/angerLabel"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:text="@string/anger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/angerLabel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            app:layout_constraintTop_toBottomOf="@+id/angerImage"
+            app:layout_constraintBottom_toTopOf="@+id/angerText"
+            app:layout_constraintEnd_toEndOf="@+id/angerImage"
+            app:layout_constraintStart_toStartOf="@+id/angerImage"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <TextView
+            android:text="@string/emo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/angerText"
+            android:fontFamily="@font/raleway_semibold"
+            app:fontFamily="@font/raleway_semibold"
+            android:textSize="@dimen/list_item_subtitle_text"
+            android:textColor="@color/secondaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/angerImage"
+            app:layout_constraintStart_toStartOf="@+id/angerImage"
+            app:layout_constraintTop_toBottomOf="@+id/angerLabel"
+            app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

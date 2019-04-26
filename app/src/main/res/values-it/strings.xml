@@ -1,0 +1,38 @@
+<resources>
+    <string name="share">Condividi</string>
+    <string name="published">pubblicato %s</string>
+    <string name="anger">Rabbia</string>
+    <string name="disgust">Disgusto</string>
+    <string name="fear">Paura</string>
+    <string name="sad">Tristezza</string>
+    <string name="surprise">Sorpresa</string>
+    <string name="rested">Normale</string>
+    <string name="happy">Felicità</string>
+    <string name="share_a_video">Apri Youtube e condividi un video \ncon VideoFace</string>
+    <string name="share_a_video2">Vedrai le smorfie di chi lo guarda!</string>
+    <string name="no_statistics">Nessuno ha ancora visto il video. Condividilo di nuovo!</string>
+    <string name="error">Whoops! Controlla di essere connesso ad internet</string>
+    <string name="faces">FACCE</string>
+    <string name="info">info</string>
+    <string name="open_youtube">Apri YouTube</string>
+
+    <string name="year">anno</string>
+    <string name="years">anni</string>
+    <string name="month">mese</string>
+    <string name="months">mesi</string>
+    <string name="week">settimana</string>
+    <string name="weeks">settimane</string>
+    <string name="day">giorno</string>
+    <string name="days">giorni</string>
+    <string name="hour">ora</string>
+    <string name="hours">ore</string>
+    <string name="minute">minuto</string>
+    <string name="minutes">minuti</string>
+    <string name="second">secondo</string>
+    <string name="seconds">secondi</string>
+    <string name="now">ora</string>
+    <string name="ago">fa</string>
+
+    <string name="female">Donna</string>
+    <string name="male">Uomo</string>
+</resources>

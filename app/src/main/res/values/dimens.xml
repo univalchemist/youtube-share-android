@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <dimen name="emotion_size">45dp</dimen>
+        <dimen name="list_item_thumb_width">160dp</dimen>
+        <dimen name="list_item_thumb_height">90dp</dimen>
+        <dimen name="message_text">18sp</dimen>
+        <dimen name="list_item_title_text">14sp</dimen>
+        <dimen name="list_item_subtitle_text">12sp</dimen>
+        <dimen name="stat_item_height">140dp</dimen>
+</resources>

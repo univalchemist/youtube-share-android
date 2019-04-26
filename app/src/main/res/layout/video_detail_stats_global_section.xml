@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="18dp">
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percHappy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/happiness"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/percSurprise"
+        app:layout_constraintTop_toTopOf="@+id/percSurprise" app:layout_constraintBottom_toBottomOf="@+id/percSurprise"/>
+
+    <TextView
+        android:id="@+id/percHappyLabel"
+        android:text="@string/happy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percHappy"
+        app:layout_constraintStart_toStartOf="@id/percHappy"
+        app:layout_constraintEnd_toEndOf="@id/percHappy"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percSurprise"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/surprise"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percHappy"
+        app:layout_constraintEnd_toStartOf="@+id/percSad" app:layout_constraintTop_toTopOf="@+id/percSad"
+        app:layout_constraintBottom_toBottomOf="@+id/percSad"/>
+
+    <TextView
+        android:text="@string/surprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percSurprise"
+        app:layout_constraintStart_toStartOf="@id/percSurprise"
+        app:layout_constraintEnd_toEndOf="@id/percSurprise"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percSad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/sadness"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percSurprise"
+        app:layout_constraintEnd_toStartOf="@+id/percFear" app:layout_constraintTop_toTopOf="@+id/percFear"
+        app:layout_constraintBottom_toBottomOf="@+id/percFear"/>
+
+    <TextView
+        android:text="@string/sad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percSad"
+        app:layout_constraintStart_toStartOf="@id/percSad"
+        app:layout_constraintEnd_toEndOf="@id/percSad"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percFear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/fear"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percSad"
+        app:layout_constraintEnd_toStartOf="@+id/percDisgust" app:layout_constraintTop_toTopOf="@+id/percDisgust"
+        app:layout_constraintBottom_toBottomOf="@+id/percDisgust"/>
+
+    <TextView
+        android:text="@string/fear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percFear"
+        app:layout_constraintStart_toStartOf="@id/percFear"
+        app:layout_constraintEnd_toEndOf="@id/percFear"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percDisgust"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/disgust"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percFear"
+        app:layout_constraintEnd_toStartOf="@+id/percAngry" app:layout_constraintTop_toTopOf="@+id/percAngry"
+        app:layout_constraintBottom_toBottomOf="@+id/percAngry"/>
+
+    <TextView
+        android:text="@string/disgust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percDisgust"
+        app:layout_constraintStart_toStartOf="@id/percDisgust"
+        app:layout_constraintEnd_toEndOf="@id/percDisgust"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percAngry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/anger"
+        app:countTextSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/percDisgust"/>
+
+    <TextView
+        android:text="@string/anger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percAngry"
+        app:layout_constraintStart_toStartOf="@id/percAngry"
+        app:layout_constraintEnd_toEndOf="@id/percAngry"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:layout_marginTop="16dp"
+        android:id="@+id/percAgeUnder18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/age"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/percHappyLabel"
+        app:layout_constraintEnd_toStartOf="@+id/percAge1835" app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/percAgeUnder18Label"
+        android:text="@string/ageUnder18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percAgeUnder18"
+        app:layout_constraintStart_toStartOf="@id/percAgeUnder18"
+        app:layout_constraintEnd_toEndOf="@id/percAgeUnder18"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percAge1835"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/age"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percAgeUnder18"
+        app:layout_constraintEnd_toStartOf="@+id/percAge3551" app:layout_constraintTop_toTopOf="@+id/percAgeUnder18"
+        app:layout_constraintBottom_toBottomOf="@+id/percAgeUnder18"/>
+
+    <TextView
+        android:text="@string/age1835"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percAge1835"
+        app:layout_constraintStart_toStartOf="@id/percAge1835"
+        app:layout_constraintEnd_toEndOf="@id/percAge1835"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percAge3551"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/age"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percAge1835"
+        app:layout_constraintEnd_toStartOf="@+id/percAgeOver51" app:layout_constraintTop_toTopOf="@+id/percAge1835"
+        app:layout_constraintBottom_toBottomOf="@+id/percAge1835"/>
+
+    <TextView
+        android:text="@string/age3551"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percAge3551"
+        app:layout_constraintStart_toStartOf="@id/percAge3551"
+        app:layout_constraintEnd_toEndOf="@id/percAge3551"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percAgeOver51"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/age"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percAge3551"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/percAge3551"
+        app:layout_constraintBottom_toBottomOf="@+id/percAge3551"/>
+
+    <TextView
+        android:text="@string/ageOver51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percAgeOver51"
+        app:layout_constraintStart_toStartOf="@id/percAgeOver51"
+        app:layout_constraintEnd_toEndOf="@id/percAgeOver51"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percMale"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/male"
+        app:countTextSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/percAgeUnder18Label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/percFemale" app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:text="@string/male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percMale"
+        app:layout_constraintStart_toStartOf="@id/percMale"
+        app:layout_constraintEnd_toEndOf="@id/percMale"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <com.app.progresviews.ProgressWheel
+        android:id="@+id/percFemale"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.16"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:barWidth="5dp"
+        app:marginBtwText="15dp"
+        app:countTextColor="@android:color/black"
+        app:defTextColor="@android:color/black"
+        app:progressColor="@color/female"
+        app:countTextSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/percMale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/percMale" app:layout_constraintBottom_toBottomOf="@+id/percMale"/>
+
+    <TextView
+        android:text="@string/female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        app:fontFamily="@font/raleway_semibold"
+        android:textSize="@dimen/list_item_subtitle_text"
+        app:layout_constraintTop_toBottomOf="@id/percFemale"
+        app:layout_constraintStart_toStartOf="@id/percFemale"
+        app:layout_constraintEnd_toEndOf="@id/percFemale"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
