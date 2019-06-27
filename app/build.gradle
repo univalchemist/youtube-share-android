@@ -64,6 +64,9 @@ dependencies {
     implementation deps.crashlytics
     implementation deps.multidex
 
+    implementation "org.jetbrains.anko:anko-commons:0.10.0"
+    implementation 'org.jsoup:jsoup:1.8.3'
+
     testImplementation testDeps.junit
     testImplementation testDeps.arch
     testImplementation testDeps.mockk
